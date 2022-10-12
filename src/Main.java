@@ -214,22 +214,6 @@ public class Main {
     }
 
     //find the centerd element sum is 15
-    public static int isCentered(int []center)
-    {
-        if (center==null || center.length==0)
-        {
 
-        }
-        else
-        {
-            for (int i=0;i<center.length;i++)
-            {
-                if (center[i]+center[i+1]+center[i+2]==15)
-                {
-                    
-                }
-            }
-        }
-    }
 
 }
