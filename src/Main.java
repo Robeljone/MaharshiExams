@@ -5,8 +5,9 @@ public class Main {
     //main method
     public  static  void  main(String[] argv)
     {
-      int [] first = {3,3,4,4};
-
+   int [] lists = {8,4,2,2};
+   int res = isGutherin(lists);
+   System.out.println(res);
     }
 
     //remove duplicate item from array
@@ -213,7 +214,39 @@ public class Main {
         }
     }
 
-    //find the centerd element sum is 15
+   //check if the number is gutherin sequence
+    public static int isGutherin(int [] guth)
+    {
+        int isGuth = 0;
+       if (guth.length==0 || guth==null)
+       {
+           return 0;
+       }
+       else if (guth[guth.length-1]==1)
+       {
+           int nextnumber = guth[0];
 
-
+         for (int i=0;i<guth.length;i++)
+         {
+            if (nextnumber==guth[i])
+            {
+                isGuth = 1;
+                if (guth[i]%2==0)
+                {
+                    nextnumber = guth[i]/2;
+                }
+                else
+                {
+                    nextnumber = guth[i]*3+1;
+                }
+            }
+            else
+            {
+                isGuth=0;
+                break;
+            }
+         }
+       }
+        return isGuth;
+    }
 }
